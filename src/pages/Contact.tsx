@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
-import { MapPin } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { MapPin, CheckCircle2 } from 'lucide-react';
+import { useState, useEffect, useRef, FormEvent } from 'react';
 
 declare global {
   interface Window {
@@ -40,7 +40,7 @@ function KakaoMap() {
     }
 
     const script = document.createElement('script');
-    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_APP_KEY&autoload=false&libraries=services';
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=e8e4da770df0013c892ffb8ac20d0342&autoload=false&libraries=services';
     script.onload = loadMap;
     document.head.appendChild(script);
   }, []);
@@ -50,6 +50,37 @@ function KakaoMap() {
 
 export default function Contact() {
   const [activeTab, setActiveTab] = useState<'inquiry' | 'location'>('inquiry');
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const privacy = form.querySelector<HTMLInputElement>('#privacy');
+    if (!privacy?.checked) {
+      alert('개인정보 수집 및 이용에 동의해주세요.');
+      return;
+    }
+    setFormStatus('loading');
+    try {
+      const formData = new FormData(form);
+      formData.append('access_key', 'ae797f18-a4e1-4f50-86ad-ac8b0fba6f29');
+      formData.append('subject', '오엔뷰 홈페이지 문의');
+      formData.append('from_name', '오엔뷰 홈페이지');
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setFormStatus('success');
+        form.reset();
+      } else {
+        setFormStatus('error');
+      }
+    } catch {
+      setFormStatus('error');
+    }
+  };
 
   return (
     <div className="pt-32 pb-32 bg-white min-h-screen">
@@ -104,27 +135,37 @@ export default function Contact() {
               className="bg-gray-50 p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-100"
             >
               <h3 className="text-3xl font-bold mb-8 text-center">Online Inquiry</h3>
-              <form className="space-y-6 max-w-3xl mx-auto">
+              {formStatus === 'success' ? (
+                <div className="text-center py-16">
+                  <CheckCircle2 className="w-16 h-16 text-[#176B36] mx-auto mb-6" />
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">문의가 접수되었습니다</h4>
+                  <p className="text-gray-500 mb-8">빠른 시일 내에 담당자가 연락드리겠습니다.</p>
+                  <button onClick={() => setFormStatus('idle')} className="px-8 py-3 bg-[#176B36] text-white rounded-xl font-bold hover:bg-[#125229] transition-colors">
+                    추가 문의하기
+                  </button>
+                </div>
+              ) : (
+              <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-700">회사명 / 담당자명 <span className="text-red-500">*</span></label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all bg-white" placeholder="입력해주세요" />
+                    <input type="text" name="company_name" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all bg-white" placeholder="입력해주세요" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-700">연락처 <span className="text-red-500">*</span></label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all bg-white" placeholder="010-0000-0000" />
+                    <input type="text" name="phone" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all bg-white" placeholder="010-0000-0000" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-700">이메일 <span className="text-red-500">*</span></label>
-                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all bg-white" placeholder="example@email.com" />
+                    <input type="email" name="email" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all bg-white" placeholder="example@email.com" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-700">문의 유형 <span className="text-red-500">*</span></label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all appearance-none bg-white cursor-pointer">
-                      <option>선택해주세요</option>
+                    <select name="inquiry_type" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all appearance-none bg-white cursor-pointer">
+                      <option value="">선택해주세요</option>
                       <option>OEM/ODM 제조 문의</option>
                       <option>제품 기획/개발 문의</option>
                       <option>용기/패키지 문의</option>
@@ -136,7 +177,7 @@ export default function Contact() {
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-700">문의 내용 <span className="text-red-500">*</span></label>
-                  <textarea rows={6} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all resize-none bg-white" placeholder="문의하실 내용을 상세히 적어주시면 빠르고 정확한 상담이 가능합니다."></textarea>
+                  <textarea name="message" rows={6} required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#176B36] focus:ring-1 focus:ring-[#176B36] outline-none transition-all resize-none bg-white" placeholder="문의하실 내용을 상세히 적어주시면 빠르고 정확한 상담이 가능합니다."></textarea>
                 </div>
 
                 <div className="flex items-start gap-3 pt-4 justify-center">
@@ -147,11 +188,15 @@ export default function Contact() {
                 </div>
 
                 <div className="text-center pt-4">
-                  <button className="w-full md:w-auto px-12 bg-[#176B36] text-white font-bold text-lg py-4 rounded-xl hover:bg-[#125229] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-                    문의하기
+                  <button type="submit" disabled={formStatus === 'loading'} className="w-full md:w-auto px-12 bg-[#176B36] text-white font-bold text-lg py-4 rounded-xl hover:bg-[#125229] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                    {formStatus === 'loading' ? '전송 중...' : '문의하기'}
                   </button>
+                  {formStatus === 'error' && (
+                    <p className="text-red-500 text-sm mt-2">전송에 실패했습니다. 다시 시도해주세요.</p>
+                  )}
                 </div>
               </form>
+              )}
             </motion.div>
           ) : (
             <motion.div
