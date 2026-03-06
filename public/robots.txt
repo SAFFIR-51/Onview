@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onviewcos.com/sitemap.xml
