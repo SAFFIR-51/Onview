@@ -16,21 +16,16 @@ function KakaoMap() {
       if (!mapRef.current) return;
       const { kakao } = window;
       kakao.maps.load(() => {
-        const geocoder = new kakao.maps.services.Geocoder();
-        geocoder.addressSearch('인천 부평구 청천동 308-53', (result: any, status: any) => {
-          if (status === kakao.maps.services.Status.OK) {
-            const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-            const map = new kakao.maps.Map(mapRef.current, {
-              center: coords,
-              level: 3,
-            });
-            const marker = new kakao.maps.Marker({ map, position: coords });
-            const infowindow = new kakao.maps.InfoWindow({
-              content: '<div style="padding:5px;font-size:12px;font-weight:bold;">오엔뷰</div>',
-            });
-            infowindow.open(map, marker);
-          }
+        const coords = new kakao.maps.LatLng(37.5081, 126.7189);
+        const map = new kakao.maps.Map(mapRef.current, {
+          center: coords,
+          level: 3,
         });
+        const marker = new kakao.maps.Marker({ map, position: coords });
+        const infowindow = new kakao.maps.InfoWindow({
+          content: '<div style="padding:5px;font-size:12px;font-weight:bold;">오엔뷰</div>',
+        });
+        infowindow.open(map, marker);
       });
     };
 
@@ -40,7 +35,7 @@ function KakaoMap() {
     }
 
     const script = document.createElement('script');
-    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=e8e4da770df0013c892ffb8ac20d0342&autoload=false&libraries=services';
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=e8e4da770df0013c892ffb8ac20d0342&autoload=false';
     script.onload = loadMap;
     document.head.appendChild(script);
   }, []);
