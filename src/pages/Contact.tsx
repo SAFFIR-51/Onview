@@ -58,12 +58,17 @@ export default function Contact() {
     setFormStatus('loading');
     try {
       const formData = new FormData(form);
-      formData.append('access_key', 'ae797f18-a4e1-4f50-86ad-ac8b0fba6f29');
-      formData.append('subject', '오엔뷰 홈페이지 문의');
-      formData.append('from_name', '오엔뷰 홈페이지');
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const body = {
+        phone: formData.get('phone'),
+        email: formData.get('email'),
+        company: formData.get('company'),
+        product: formData.get('product'),
+        message: formData.get('message'),
+      };
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
       });
       const data = await res.json();
       if (data.success) {
