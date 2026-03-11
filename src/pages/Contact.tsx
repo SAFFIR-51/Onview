@@ -61,8 +61,8 @@ export default function Contact() {
       const body = {
         phone: formData.get('phone'),
         email: formData.get('email'),
-        company: formData.get('company'),
-        product: formData.get('product'),
+        company_name: formData.get('company_name'),
+        inquiry_type: formData.get('inquiry_type'),
         message: formData.get('message'),
       };
       const res = await fetch('/api/contact', {

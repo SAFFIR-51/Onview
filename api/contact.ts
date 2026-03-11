@@ -6,7 +6,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
 
-  const { phone, email, company, product, message } = req.body;
+  const { phone, email, company_name, inquiry_type, message } = req.body;
 
   if (!phone || !email || !message) {
     return res.status(400).json({ success: false, message: '필수 항목을 입력해주세요.' });
@@ -25,8 +25,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     <table style="border-collapse:collapse;width:100%;max-width:600px;">
       <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">연락처</td><td style="padding:8px;border:1px solid #ddd;">${phone}</td></tr>
       <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">이메일</td><td style="padding:8px;border:1px solid #ddd;">${email}</td></tr>
-      <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">회사명</td><td style="padding:8px;border:1px solid #ddd;">${company || '-'}</td></tr>
-      <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">제품 유형</td><td style="padding:8px;border:1px solid #ddd;">${product || '-'}</td></tr>
+      <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">회사명/담당자명</td><td style="padding:8px;border:1px solid #ddd;">${company_name || '-'}</td></tr>
+      <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">문의 유형</td><td style="padding:8px;border:1px solid #ddd;">${inquiry_type || '-'}</td></tr>
       <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">문의 내용</td><td style="padding:8px;border:1px solid #ddd;">${message}</td></tr>
     </table>
   `;
