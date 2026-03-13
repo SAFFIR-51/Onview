@@ -29,8 +29,12 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="text-left md:text-right space-y-2 text-sm font-light">
             <p className="flex items-center md:justify-end gap-3">
-              <span className="font-bold text-gray-500 md:order-2">Tel</span>
+              <span className="font-bold text-gray-500 md:order-2">Tel 1</span>
               <a href="tel:010-7661-5729" className="text-gray-300 hover:text-white transition-colors md:order-1">010-7661-5729</a>
+            </p>
+            <p className="flex items-center md:justify-end gap-3">
+              <span className="font-bold text-gray-500 md:order-2">Tel 2</span>
+              <a href="tel:010-9699-7744" className="text-gray-300 hover:text-white transition-colors md:order-1">010-9699-7744</a>
             </p>
             <p className="flex items-center md:justify-end gap-3">
               <span className="font-bold text-gray-500 md:order-2">Email</span>

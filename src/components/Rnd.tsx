@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Microscope } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Rnd() {
   return (
@@ -47,22 +48,15 @@ export default function Rnd() {
             차별화된 제품을 구현합니다.
           </p>
           
-          <div className="flex flex-wrap gap-4">
-            <motion.button 
+          <Link to="/contact">
+            <motion.button
               whileHover={{ scale: 1.05, backgroundColor: '#176B36' }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#176B36] text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 shadow-lg hover:shadow-[#176B36]/50 transition-all border border-[#176B36]"
             >
-              연구소 소개 보기 <ArrowRight className="w-5 h-5" />
+              무료 상담 신청하기 <ArrowRight className="w-5 h-5" />
             </motion.button>
-            <motion.button 
-              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-transparent text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 border border-white/30 hover:border-white transition-all backdrop-blur-sm"
-            >
-              보유 처방 리스트
-            </motion.button>
-          </div>
+          </Link>
         </motion.div>
 
         {/* Floating Cards Effect */}

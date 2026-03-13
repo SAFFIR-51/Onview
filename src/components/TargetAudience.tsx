@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, Building2, User2 } from 'lucide-react';
 import { ReactNode } from 'react';
 
-const Card = ({ title, subtitle, items, icon: Icon, isDark }: { title: string, subtitle: ReactNode, items: string[], icon: any, isDark?: boolean }) => (
+const Card = ({ title, subtitle, items, icon: Icon, isDark, href }: { title: string, subtitle: ReactNode, items: string[], icon: any, isDark?: boolean, href: string }) => (
   <motion.div 
     whileHover={{ y: -10 }}
     className={`p-10 rounded-[2.5rem] flex flex-col justify-between h-full transition-all duration-300 relative overflow-hidden group ${
@@ -34,14 +34,14 @@ const Card = ({ title, subtitle, items, icon: Icon, isDark }: { title: string, s
       </ul>
     </div>
     
-    <button className={`w-full py-5 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn ${
-      isDark 
-        ? 'bg-white text-black hover:bg-gray-200' 
+    <a href={href} target="_blank" rel="noopener noreferrer" className={`w-full py-5 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn ${
+      isDark
+        ? 'bg-white text-black hover:bg-gray-200'
         : 'bg-[#176B36] text-white hover:bg-[#125229] shadow-lg hover:shadow-xl'
     }`}>
-      상담 받아보기 
+      상담 받아보기
       <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-    </button>
+    </a>
   </motion.div>
 );
 
@@ -70,6 +70,7 @@ export default function TargetAudience() {
               "제조부터 브랜딩·마케팅까지 통합 지원이 필요한 분"
             ]}
             icon={Building2}
+            href="https://open.kakao.com/o/sQNHfeli"
           />
           <Card
             title="차별화된 제품을 원하는 대표님"
@@ -81,6 +82,7 @@ export default function TargetAudience() {
             ]}
             icon={User2}
             isDark
+            href="https://open.kakao.com/o/scLWXdli"
           />
         </div>
       </div>

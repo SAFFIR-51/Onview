@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function ZeroToHundred() {
   return (
@@ -32,9 +33,9 @@ export default function ZeroToHundred() {
               ))}
             </ul>
 
-            <button className="bg-[#176B36] text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:bg-[#125229] transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-300">
+            <Link to="/contact" className="bg-[#176B36] text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-[#125229] transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-300">
               무료 상담 신청하기 <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
           </motion.div>
 
           <motion.div 

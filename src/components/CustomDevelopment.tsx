@@ -39,28 +39,16 @@ export default function CustomDevelopment() {
             고객사의 상황에 최적화된 솔루션을 제안해드립니다.
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <Link to="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group flex items-center gap-3 bg-[#4ade80] text-black px-8 py-4 rounded-full font-bold text-lg"
-              >
-                뷰티창업 컨설팅 지원
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </Link>
-            <Link to="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group flex items-center gap-3 border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-colors"
-              >
-                브랜딩/마케팅 지원
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </Link>
-          </div>
+          <Link to="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center gap-3 bg-[#4ade80] text-black px-8 py-4 rounded-full font-bold text-lg"
+            >
+              무료 상담 신청하기
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
