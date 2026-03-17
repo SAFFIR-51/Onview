@@ -15,17 +15,17 @@ export default function ZeroToHundred() {
           >
             <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">Full Service</span>
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-8">
-              유연하게 시작하고<br />
-              <span className="text-[#176B36]">체계적으로 확장</span>합니다
+              생산은 안정적으로,<br />
+              확장은 체계적으로
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              브랜드 론칭 과정은 예상보다 복잡합니다.<br/>
-              아이디어는 명확해도 실행 단계에서 어려움을 겪는 경우가 많습니다.<br/>
-              <strong className="text-gray-900">오엔뷰는 전 과정을 체계적으로 지원</strong>합니다.
+              <strong className="text-[#176B36]">ONVIEW는 월 생산량 200만개 규모</strong>의 생산 경쟁력을 바탕으로<br/>
+              브랜드의 생산 확대와 운영 안정성에 체계적으로 대응합니다.<br/>
+              <strong className="text-gray-900">생산부터 후공정까지 하나의 흐름으로 연결</strong>합니다.
             </p>
 
             <ul className="space-y-4 mb-10">
-              {["소량 생산으로 시장 반응 확인 후 확장 가능", "OEM·ODM 맞춤 제조 시스템으로 체계적 관리", "복잡한 인허가 절차부터 트렌디한 제형 제안까지"].map((item, i) => (
+              {["월 생산량 200만개 규모의 생산 대응력", "브랜드 물량 확대에 맞춘 유연한 운영", "생산부터 후공정까지 연결된 통합 시스템"].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-lg text-gray-700 font-medium">
                   <CheckCircle2 className="w-6 h-6 text-[#176B36]" />
                   {item}
@@ -80,17 +80,17 @@ export default function ZeroToHundred() {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-3 h-3 bg-[#4ade80] rounded-full mb-2"></div>
-                    <span className="text-sm text-gray-500 font-medium">개발</span>
+                    <span className="text-sm text-gray-500 font-medium">생산</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-3 h-3 bg-[#176B36] rounded-full mb-2"></div>
-                    <span className="text-sm text-gray-900 font-bold">완성</span>
+                    <span className="text-sm text-gray-900 font-bold">확장</span>
                   </div>
                 </div>
 
                 <div className="mt-10 p-6 bg-gray-50 rounded-2xl border border-gray-100 text-center">
                   <p className="text-xl font-bold text-gray-800">
-                    "저희가 함께 <span className="text-[#176B36]">100까지 채워드립니다.</span>"
+                    브랜드 성장의 전 과정을 <span className="text-[#176B36]">체계적으로 연결합니다</span>
                   </p>
                 </div>
               </div>

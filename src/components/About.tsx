@@ -83,6 +83,35 @@ export default function About() {
           </div>
         </motion.div>
       </div>
+
+      {/* 월 생산량 섹션 */}
+      <div className="relative py-36 overflow-hidden">
+        <img
+          src="/images/수정2.png"
+          alt="생산 시설"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 container mx-auto px-6 max-w-7xl"
+        >
+          <h3 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4">
+            <span className="text-white">월 생산량 </span>
+            <span className="text-[#176B36]">200만개</span>
+          </h3>
+          <p className="text-xl md:text-2xl text-white font-bold mb-6">
+            브랜드 성장을 뒷받침하는 생산 경쟁력
+          </p>
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+            개발 속도, 생산 안정성, 후공정 대응력을 함께 갖춘<br />
+            통합 운영 구조로 브랜드의 실행력을 높입니다
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 }
