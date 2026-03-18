@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-12">
           {/* Company Info */}
           <div>
-            <img src="/images/오엔뷰로고2.png" alt="ONVIEW" className="h-8 w-auto mb-6" />
+            <img src="/images/logo-light.png" alt="ONVIEW" className="h-8 w-auto mb-6" />
             <div className="space-y-2 text-sm font-light leading-relaxed">
               <p className="flex items-center gap-3">
                 <span className="font-bold text-gray-500 w-28">회사명</span>

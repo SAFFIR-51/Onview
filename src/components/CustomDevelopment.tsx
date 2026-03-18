@@ -13,7 +13,7 @@ export default function CustomDevelopment() {
           className="w-full h-full"
         >
           <img 
-            src="/images/사진11.png"
+            src="/images/custom-dev.png"
             alt="Manufacturing" 
             className="w-full h-full object-cover brightness-[0.3]"
           />

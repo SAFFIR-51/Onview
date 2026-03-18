@@ -109,7 +109,7 @@ export default function History() {
       {/* Image Banner */}
       <div className="relative h-[500px] overflow-hidden">
         <img
-          src="/images/사진4.png"
+          src="/images/history.png"
           alt="Partnership"
           className="w-full h-full object-cover brightness-50"
         />

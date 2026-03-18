@@ -9,7 +9,7 @@ const banners = [
     subtitle: "MANUFACTURING FIRST",
     title: "화장품의 시작은\n제조입니다.",
     desc: "오엔뷰는 기획부터 개발, 생산, 유통까지\n브랜드의 기반을 설계합니다.",
-    image: "/images/사진1.png",
+    image: "/images/hero-1.png",
     theme: "dark"
   },
   {
@@ -17,7 +17,7 @@ const banners = [
     subtitle: "COLLABORATIVE PRODUCTION NETWORK",
     title: "다양한 프로젝트와\n연결된 협력 생산",
     desc: "ONVIEW는 협력 생산 파트너와 연계되어\n다양한 제조 및 후공정 프로젝트를 수행하고 있습니다",
-    image: "/images/수정1.png",
+    image: "/images/hero-collab.png",
     theme: "dark"
   },
   {
@@ -25,7 +25,7 @@ const banners = [
     subtitle: "IDEA TO PRODUCT",
     title: "오엔뷰는 아이디어를\n제품으로 만듭니다.",
     desc: "기획부터 R&D, 생산, 이퓨어 등 유통 연계까지\n한 번에 진행합니다.",
-    image: "/images/사진2.png",
+    image: "/images/hero-2.png",
     theme: "light"
   },
   {
@@ -33,7 +33,7 @@ const banners = [
     subtitle: "GLOBAL STANDARD MANUFACTURING",
     title: "국내를 넘어,\n글로벌 기준으로 만듭니다.",
     desc: "싱가포르·캐나다·일본·미국 등\n글로벌 제조 프로젝트를 수행하고 있습니다.",
-    image: "/images/사진3.png",
+    image: "/images/hero-3.png",
     theme: "dark"
   }
 ];

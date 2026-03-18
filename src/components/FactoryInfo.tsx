@@ -74,15 +74,15 @@ export default function FactoryInfo() {
               whileHover={{ y: -5 }}
               className="rounded-[2rem] overflow-hidden shadow-2xl relative h-80 group"
             >
-              <img src="/images/사진14.png" alt="Machinery" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="/images/factory-1.png" alt="Machinery" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full text-sm font-bold text-[#176B36] shadow-lg">
                 + ONVIEW
               </div>
             </motion.div>
 
             <div className="grid grid-cols-2 gap-4">
-               <motion.img whileHover={{ scale: 1.02 }} src="/images/사진15.png" alt="Machine 1" className="w-full h-40 object-cover rounded-[1.5rem]" />
-               <motion.img whileHover={{ scale: 1.02 }} src="/images/사진16.png" alt="Machine 2" className="w-full h-40 object-cover rounded-[1.5rem]" />
+               <motion.img whileHover={{ scale: 1.02 }} src="/images/factory-2.png" alt="Machine 1" className="w-full h-40 object-cover rounded-[1.5rem]" />
+               <motion.img whileHover={{ scale: 1.02 }} src="/images/factory-3.png" alt="Machine 2" className="w-full h-40 object-cover rounded-[1.5rem]" />
             </div>
           </div>
         </div>

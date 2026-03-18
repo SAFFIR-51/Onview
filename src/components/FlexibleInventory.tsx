@@ -21,7 +21,7 @@ export default function FlexibleInventory() {
             <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
           </div>
 
-          <h3 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h3 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="text-[#176B36]">재고 부담 없이 시작하세요.</span>
           </h3>
         </motion.div>

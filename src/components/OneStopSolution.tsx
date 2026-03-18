@@ -53,7 +53,7 @@ export default function OneStopSolution() {
               className="relative z-10"
             >
               <img
-                src="/images/사진18.png"
+                src="/images/onestop.png"
                 alt="Meeting"
                 className="w-full rounded-[2.5rem] shadow-2xl"
               />

@@ -68,7 +68,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             <img
-              src={isLight ? '/images/오엔뷰로고2.png' : '/images/오엔뷰로고.png'}
+              src={isLight ? '/images/logo-light.png' : '/images/logo-dark.png'}
               alt="ONVIEW"
               className="h-7 md:h-8 w-auto"
             />

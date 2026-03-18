@@ -64,9 +64,9 @@ export default function About() {
       </div>
 
       {/* 1) 생산 구조 연결 섹션 - 수정3.png 배경 */}
-      <div className="relative py-36 overflow-hidden">
+      <div className="relative py-36 xl:py-48 2xl:py-56 overflow-hidden">
         <img
-          src="/images/수정3.png"
+          src="/images/about-production.png"
           alt="생산 구조"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -93,9 +93,9 @@ export default function About() {
       </div>
 
       {/* 2) 월 생산량 섹션 - 수정5.png 배경, 우측 정렬 */}
-      <div className="relative py-36 overflow-hidden">
+      <div className="relative py-36 xl:py-48 2xl:py-56 overflow-hidden">
         <img
-          src="/images/수정5.png"
+          src="/images/about-capacity.png"
           alt="생산 시설"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -121,9 +121,9 @@ export default function About() {
       </div>
 
       {/* 3) 협업 인프라 섹션 - 수정4.png 배경 */}
-      <div className="relative py-36 overflow-hidden">
+      <div className="relative py-36 xl:py-48 2xl:py-56 overflow-hidden">
         <img
-          src="/images/수정4.png"
+          src="/images/about-collab.png"
           alt="협업 인프라"
           className="absolute inset-0 w-full h-full object-cover"
         />

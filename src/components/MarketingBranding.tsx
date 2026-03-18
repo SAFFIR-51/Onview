@@ -82,7 +82,7 @@ export default function MarketingBranding() {
               className="relative z-10 rounded-3xl overflow-hidden shadow-2xl"
             >
               <img 
-                src="/images/사진17.png"
+                src="/images/marketing.png"
                 alt="Product Branding" 
                 className="w-full object-cover"
               />

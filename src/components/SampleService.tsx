@@ -1,10 +1,10 @@
 import { motion } from 'motion/react';
 
 const sampleImages = [
-  "/images/사진5.png",
-  "/images/사진6.png",
-  "/images/사진7.png",
-  "/images/사진8.png",
+  "/images/sample-1.png",
+  "/images/sample-2.png",
+  "/images/sample-3.png",
+  "/images/sample-4.png",
 ];
 
 export default function SampleService() {

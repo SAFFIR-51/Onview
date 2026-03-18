@@ -83,7 +83,7 @@ export default function ConsumerChoice() {
             </div>
             <div className="relative h-96">
               <img 
-                src="/images/사진9.png"
+                src="/images/consumer-1.png"
                 alt="Clean Factory" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -110,7 +110,7 @@ export default function ConsumerChoice() {
             </div>
             <div className="relative h-96">
               <img 
-                src="/images/사진10.png"
+                src="/images/consumer-2.png"
                 alt="Dirty Factory" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -132,7 +132,7 @@ export default function ConsumerChoice() {
           viewport={{ once: true }}
           className="bg-gray-50 p-10 rounded-[2rem] border border-gray-100 inline-flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto shadow-lg"
         >
-          <img src="/images/오엔뷰로고.png" alt="오엔뷰" className="w-48 h-auto object-contain" />
+          <img src="/images/logo-dark.png" alt="오엔뷰" className="w-48 h-auto object-contain" />
           <div className="text-left flex-1 border-l border-gray-200 pl-10">
             <h3 className="font-bold text-2xl text-gray-900 mb-2 flex items-center gap-2">
               (주)오엔뷰는
