@@ -63,35 +63,14 @@ export default function About() {
 
       </div>
 
-      {/* 초록 그라데이션 섹션 */}
-      <div className="py-36" style={{ background: 'linear-gradient(to bottom, white 0%, #176B36 15%, #176B36 85%, #f9fafb 100%)' }}>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center text-white px-4"
-        >
-          <span className="text-white/80 font-bold text-xl md:text-2xl block mb-6">(주)오엔뷰는</span>
-          <div className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-snug">
-            <span className="font-black text-white drop-shadow-lg">빠르게 변화하는 시장</span>
-            <span className="font-light text-white/80">에 맞춰</span>
-          </div>
-          <div className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-snug mt-4">
-            <span className="font-black text-white drop-shadow-lg">제조 역량을 지속적으로 확장</span>
-            <span className="font-light text-white/80">해왔습니다.</span>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* 월 생산량 섹션 */}
+      {/* 1) 생산 구조 연결 섹션 - 수정3.png 배경 */}
       <div className="relative py-36 overflow-hidden">
         <img
-          src="/images/수정2.png"
-          alt="생산 시설"
+          src="/images/수정3.png"
+          alt="생산 구조"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent md:hidden" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,16 +78,70 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="relative z-10 container mx-auto px-6 max-w-7xl"
         >
-          <h3 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4">
-            <span className="text-white">월 생산량 </span>
-            <span className="text-[#176B36]">200만개</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-gray-900 leading-tight">
+            브랜드의 아이디어를<br />
+            생산 구조로 <span className="text-blue-600">연결</span>합니다.
           </h3>
-          <p className="text-xl md:text-2xl text-white font-bold mb-6">
+          <p className="text-base md:text-lg text-gray-900 leading-relaxed">
+            오엔뷰는 제품 기획 단계에서부터<br />
+            개발, 제조, 패키징까지 이어지는<br />
+            생산 흐름을 함께 설계합니다.<br />
+            브랜드가 안정적으로 제품을 출시할 수 있도록<br />
+            연결된 제조 기반을 제공합니다
+          </p>
+        </motion.div>
+      </div>
+
+      {/* 2) 월 생산량 섹션 - 수정5.png 배경, 우측 정렬 */}
+      <div className="relative py-36 overflow-hidden">
+        <img
+          src="/images/수정5.png"
+          alt="생산 시설"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 container mx-auto px-6 max-w-7xl text-right"
+        >
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4">
+            <span className="text-white">월 생산량 </span>
+            <span className="text-[#4ade80]">200만개</span>
+          </h3>
+          <p className="text-2xl md:text-3xl lg:text-4xl text-white font-black mb-6">
             브랜드 성장을 뒷받침하는 생산 경쟁력
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed">
             개발 속도, 생산 안정성, 후공정 대응력을 함께 갖춘<br />
             통합 운영 구조로 브랜드의 실행력을 높입니다
+          </p>
+        </motion.div>
+      </div>
+
+      {/* 3) 협업 인프라 섹션 - 수정4.png 배경 */}
+      <div className="relative py-36 overflow-hidden">
+        <img
+          src="/images/수정4.png"
+          alt="협업 인프라"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent md:hidden" />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 container mx-auto px-6 max-w-7xl"
+        >
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-gray-900 leading-tight">
+            브랜드와 생산을 잇는<br />
+            유연한 <span className="text-[#176B36]">협업 인프라</span>
+          </h3>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            오엔뷰는 다양한 생산 환경과 협업 구조를 바탕으로<br />
+            브랜드에 필요한 실행 기반을 폭넓게 연결합니다.
           </p>
         </motion.div>
       </div>
