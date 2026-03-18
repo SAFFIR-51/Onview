@@ -25,17 +25,17 @@ export default function GlobalExport() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-24">
           <div>
             <span className="text-[#4ade80] font-bold tracking-wider text-sm uppercase mb-4 block">해외 시장 대응 제조 시스템</span>
-            <h2 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
+            <h2 className="text-3xl md:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight">
               국내를 넘어<br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#176B36] to-[#4ade80]">글로벌까지</span>
             </h2>
             <div className="w-24 h-1.5 bg-[#176B36] mb-8 rounded-full"></div>
           </div>
           <div className="text-right md:max-w-lg">
-            <p className="text-2xl md:text-3xl font-bold text-gray-200 mb-6 leading-snug">
+            <p className="text-lg md:text-3xl font-bold text-gray-200 mb-6 leading-snug">
               싱가포르, 캐나다, 일본, 미국, 모로코 등<br/>
-              <span className="text-gray-500 text-lg md:text-xl font-normal mt-2 block">
-                오엔뷰는 해외 시장을 대상으로 한 제조 및 수출 협업을 진행하고 있습니다.<br/>
+              <span className="text-gray-500 text-base md:text-xl font-normal mt-2 block">
+                오엔뷰는 해외 시장을 대상으로 한<br className="md:hidden" /> 제조 및 수출 협업을 진행하고 있습니다.<br/>
                 각 국가별 유통 환경에 맞춘 제품 생산 및 대응이 가능합니다.
               </span>
             </p>
@@ -43,8 +43,8 @@ export default function GlobalExport() {
         </div>
 
         <div className="mb-16">
-          <h3 className="text-3xl font-bold mb-4">국가별 해외수출 어려우신가요?</h3>
-          <p className="text-gray-400 text-lg">
+          <h3 className="text-xl md:text-3xl font-bold mb-4">국가별 해외수출 어려우신가요?</h3>
+          <p className="text-gray-400 text-base md:text-lg">
             국내 시장뿐 아니라 해외 진출까지 고려한 경험과 노하우를 갖춘 오엔뷰가<br className="hidden md:block"/>
             브랜드의 미래 전략을 설계하는 데 든든한 지원군이 되겠습니다.
           </p>

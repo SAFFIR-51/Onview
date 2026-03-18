@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import React from 'react';
 import { ClipboardCheck, FlaskConical, Factory, Lightbulb, Package } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 const Step: React.FC<{ title: string, icon: any, index: number, total: number }> = ({ title, icon: Icon, index, total }) => (
   <motion.div
@@ -32,21 +33,12 @@ export default function Differentiation() {
   return (
     <section className="py-32 bg-gray-50 text-center overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <SectionHeader
+          label="OEM · ODM Process"
+          title={<>소량 생산 & OEM·ODM<br/>맞춤 제조 시스템</>}
+          desc={<>오엔뷰는 소량 생산과 OEM·ODM 방식으로<br/>브랜드에 맞는 제조를 지원합니다.</>}
           className="mb-16"
-        >
-          <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">OEM · ODM Process</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-            소량 생산 & OEM·ODM<br/>맞춤 제조 시스템
-          </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-            오엔뷰는 소량 생산과 OEM·ODM 방식으로<br/>
-            브랜드에 맞는 제조를 지원합니다.
-          </p>
-        </motion.div>
+        />
 
         {/* OEM vs ODM 비교 */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-24">

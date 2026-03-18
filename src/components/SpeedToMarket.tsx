@@ -4,7 +4,7 @@ import { Timer, Rocket, CheckCircle2 } from 'lucide-react';
 export default function SpeedToMarket() {
   return (
     <section className="py-32 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-20">
+      <div className="container mx-auto px-4 max-w-7xl flex flex-col lg:flex-row items-start justify-between gap-20">
         <div className="lg:w-1/2 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -14,11 +14,11 @@ export default function SpeedToMarket() {
             <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block flex items-center gap-2">
               <Rocket className="w-4 h-4" /> Speed to Market
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-8 tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-6 md:mb-8 tracking-tight">
               트렌드에 맞춰<br />
               <span className="text-[#176B36]">빠르게 출시</span>합니다.
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed mb-10">
+            <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-8 md:mb-10">
               시장 흐름을 이해하는 능력 역시 중요한 요소입니다.<br/>
               다양한 브랜드와 협업 경험을 통해 축적된 데이터로<br/>
               트렌드 분석과 방향성 제안까지 함께 제공합니다.
@@ -79,7 +79,7 @@ export default function SpeedToMarket() {
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <span className="text-7xl font-black text-[#176B36] tracking-tighter">16</span>
-                  <span className="text-xl font-bold text-gray-400 uppercase tracking-widest mt-2">days</span>
+                  <span className="text-base md:text-xl font-bold text-gray-400 uppercase tracking-widest mt-2">days</span>
                 </div>
                 
                 {/* Floating Badge */}

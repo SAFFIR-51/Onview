@@ -17,7 +17,7 @@ export default function SampleService() {
               생산 전 충분한<br/>
               <span className="text-[#176B36]">샘플 테스트</span>를 진행합니다
             </h2>
-            <div className="text-xl text-gray-600 mb-4 leading-relaxed">
+            <div className="text-base md:text-xl text-gray-600 mb-4 leading-relaxed">
               <p>초기 대량 생산은<br/>브랜드에 부담이 될 수 있습니다.</p>
               <p className="mt-2"><span className="text-[#176B36] font-bold">빠른 시장 테스트용 샘플 제작이 가능</span>해</p>
               <p>시장 반응을 확인한 뒤<br/>생산을 진행할 수 있습니다.</p>

@@ -1,29 +1,19 @@
 import { motion } from 'motion/react';
 import { Factory, Package, Zap, Lightbulb, ClipboardCheck } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 export default function FactoryInfo() {
   return (
     <section className="py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* 상단 타이틀 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <SectionHeader
+          label="Manufacturing"
+          icon={<Factory className="w-4 h-4" />}
+          title={<><span className="text-[#176B36]">생산</span>부터 <span className="text-[#176B36]">물류</span>까지,<br/><span className="text-[#176B36]">통합된 제조시스템</span></>}
+          desc={<>오엔뷰는 단계별 제조 공정을 체계적으로 구축하여<br/>브랜드가 안심하고 성장할 수 있는 환경을 제공합니다.</>}
           className="mb-16"
-        >
-          <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block flex items-center gap-2">
-            <Factory className="w-4 h-4" /> Manufacturing
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight">
-            <span className="text-[#176B36]">생산</span>부터 <span className="text-[#176B36]">물류</span>까지,<br/>
-            <span className="text-[#176B36]">통합된 제조시스템</span>
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            오엔뷰는 단계별 제조 공정을 체계적으로 구축하여<br/>
-            브랜드가 안심하고 성장할 수 있는 환경을 제공합니다.
-          </p>
-        </motion.div>
+        />
 
         {/* 중단: 공정 카드 (좌) + 통합 제조 공정 시스템 (우) */}
         <div className="flex flex-col lg:flex-row gap-20 mb-16">

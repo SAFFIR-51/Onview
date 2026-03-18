@@ -12,11 +12,11 @@ export default function OneStopSolution() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-gray-900 leading-[1.1] tracking-tight">
                 기획부터 유통까지<br/>
                 <span className="text-[#176B36]">ONE-LINE 시스템</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+              <p className="text-base md:text-xl text-gray-600 mb-8 md:mb-12 leading-relaxed">
                 오엔뷰는 단순한 제품 생산을 넘어서<br/>
                 복잡한 과정을 단순하게 만드는 시스템으로<br/>
                 <span className="font-bold text-gray-900 border-b-2 border-[#176B36]">브랜드의 시작부터 유통까지</span> 전 과정을 통합 관리합니다.<br/>

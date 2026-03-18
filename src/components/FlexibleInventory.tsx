@@ -27,7 +27,7 @@ export default function FlexibleInventory() {
         </motion.div>
 
         <div className="mt-20 relative">
-          <div className="inline-block bg-gray-100 px-8 py-3 rounded-full text-xl font-bold text-gray-600 mb-12 shadow-inner">
+          <div className="inline-block bg-gray-100 px-6 py-2 md:px-8 md:py-3 rounded-full text-sm md:text-xl font-bold text-gray-600 mb-12 shadow-inner">
             Total 10,000개 생산 시
           </div>
           
@@ -44,8 +44,8 @@ export default function FlexibleInventory() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <Warehouse className="w-12 h-12 mb-4 opacity-80" />
-              <span className="text-3xl font-light opacity-90 mb-1">5,000개</span>
-              <span className="text-5xl font-black tracking-tight">무료보관</span>
+              <span className="text-xl md:text-3xl font-light opacity-90 mb-1">5,000개</span>
+              <span className="text-3xl md:text-5xl font-black tracking-tight">무료보관</span>
               <div className="mt-4 px-4 py-1 bg-white/20 rounded-full text-sm font-bold backdrop-blur-sm">
                 재고 부담 ZERO
               </div>
@@ -64,8 +64,8 @@ export default function FlexibleInventory() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <PackageCheck className="w-12 h-12 mb-4 opacity-80" />
-              <span className="text-3xl font-light opacity-90 mb-1">5,000개</span>
-              <span className="text-5xl font-black tracking-tight">우선출고</span>
+              <span className="text-xl md:text-3xl font-light opacity-90 mb-1">5,000개</span>
+              <span className="text-3xl md:text-5xl font-black tracking-tight">우선출고</span>
               <div className="mt-4 px-4 py-1 bg-white/10 rounded-full text-sm font-bold backdrop-blur-sm">
                 필요한 만큼만
               </div>

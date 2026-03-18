@@ -108,11 +108,14 @@ export default function History() {
 
       {/* Image Banner */}
       <div className="relative h-[500px] overflow-hidden">
-        <img
-          src="/images/history.png"
-          alt="Partnership"
-          className="w-full h-full object-cover brightness-50"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/images/history-mobile.png" />
+          <img
+            src="/images/history.png"
+            alt="Partnership"
+            className="w-full h-full object-cover brightness-50"
+          />
+        </picture>
         <div className="absolute inset-0 flex flex-col justify-center items-end container mx-auto px-4 max-w-6xl text-right text-white">
           <motion.div
             initial={{ opacity: 0, x: 50 }}

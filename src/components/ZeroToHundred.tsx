@@ -14,19 +14,19 @@ export default function ZeroToHundred() {
             className="lg:w-1/2"
           >
             <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">Full Service</span>
-            <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-8">
+            <h2 className="text-3xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-6 md:mb-8">
               생산은 안정적으로,<br />
               확장은 체계적으로
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed mb-10">
+            <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-8 md:mb-10">
               <strong className="text-[#176B36]">ONVIEW는 월 생산량 200만개 규모</strong>의 생산 경쟁력을 바탕으로<br/>
               브랜드의 생산 확대와 운영 안정성에 체계적으로 대응합니다.<br/>
               <strong className="text-gray-900">생산부터 후공정까지 하나의 흐름으로 연결</strong>합니다.
             </p>
 
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10">
               {["월 생산량 200만개 규모의 생산 대응력", "브랜드 물량 확대에 맞춘 유연한 운영", "생산부터 후공정까지 연결된 통합 시스템"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-lg text-gray-700 font-medium">
+                <li key={i} className="flex items-center gap-3 text-sm md:text-lg text-gray-700 font-medium">
                   <CheckCircle2 className="w-6 h-6 text-[#176B36]" />
                   {item}
                 </li>

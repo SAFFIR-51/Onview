@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, AlertTriangle, Check, X, Factory, Award, Settings, FlaskConical, Users, Rocket } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 
 const reasons = [
   { num: "01", title: "소량생산이 가능한 제조 설비 완비", icon: Factory, desc: "시장 반응을 확인할 수 있는 소량 생산 환경을 지원합니다." },
@@ -15,17 +16,11 @@ export default function ConsumerChoice() {
     <section className="py-32 bg-white text-center overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* 이유있는 선택 Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <SectionHeader
+          label="Why Onview"
+          title={<>왜 많은 브랜드가<br/><span className="text-[#176B36]">오엔뷰를 선택할까요?</span></>}
           className="mb-20"
-        >
-          <h2 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
-            왜 많은 브랜드가<br/>
-            <span className="text-[#176B36]">오엔뷰를 선택할까요?</span>
-          </h2>
-        </motion.div>
+        />
 
         {/* 6 Reasons Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
@@ -45,7 +40,7 @@ export default function ConsumerChoice() {
                 </div>
                 <reason.icon className="w-6 h-6 text-[#176B36] opacity-50 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3 group-hover:text-[#176B36] transition-colors leading-snug">
+              <h3 className="font-bold text-base md:text-xl text-gray-900 mb-3 group-hover:text-[#176B36] transition-colors leading-snug">
                 {reason.title}
               </h3>
               <p className="text-gray-500 leading-relaxed">{reason.desc}</p>
@@ -54,21 +49,12 @@ export default function ConsumerChoice() {
         </div>
 
         {/* Safety Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <SectionHeader
+          label="Quality Standard"
+          title={<>소비자는 무엇을 기준으로<br/><span className="text-gray-400">브랜드를 선택할까요?</span></>}
+          desc={<>소비자가 브랜드를 선택하는<br className="md:hidden" /> 중요한 기준은 <span className="font-bold text-[#176B36] border-b-2 border-[#176B36]">품질과 안정성</span>입니다.<br/>원료 선정부터 제조 관리까지<br className="md:hidden" /> 명확한 기준이 필요합니다.</>}
           className="mb-20"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-            소비자는 무엇을 기준으로<br/>
-            <span className="text-gray-400">브랜드를 선택할까요?</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            소비자가 브랜드를 선택하는<br className="md:hidden" /> 중요한 기준은 <span className="font-bold text-[#176B36] border-b-2 border-[#176B36]">품질과 안정성</span>입니다.<br/>
-            원료 선정부터 제조 관리까지<br className="md:hidden" /> 명확한 기준이 필요합니다.
-          </p>
-        </motion.div>
+        />
 
         <div className="flex flex-col md:flex-row gap-8 mb-24">
           <motion.div 

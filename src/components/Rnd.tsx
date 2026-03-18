@@ -44,7 +44,7 @@ export default function Rnd() {
           </p>
           <p className="text-gray-300 text-lg leading-relaxed mb-12 max-w-xl">
             제품의 경쟁력은 연구에서 완성됩니다.<br/>
-            트렌드를 반영한 제형 개발과 브랜드에 맞춘 성분 설계를 통해<br/>
+            트렌드를 반영한 제형 개발과<br className="md:hidden" /> 브랜드에 맞춘 성분 설계를 통해<br/>
             차별화된 제품을 구현합니다.
           </p>
           

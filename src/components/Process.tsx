@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ReactNode } from 'react';
+import SectionHeader from './SectionHeader';
 
 const Step = ({ num, title, desc, isLast }: { num: string, title: string, desc: ReactNode, isLast?: boolean }) => (
   <motion.div
@@ -41,16 +42,13 @@ export default function Process() {
       </div>
 
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
-        <div className="text-center mb-20">
-          <span className="text-[#4ade80]/80 font-bold tracking-wider text-sm uppercase mb-4 block">PRODUCTION SYSTEM</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white/95 tracking-tight mb-6">
-            생산부터 출고까지 한 번에!
-          </h2>
-          <p className="text-white/40 text-lg max-w-2xl mx-auto">
-            제조 공정 전 과정을 6단계 시스템으로 관리하여<br/>
-            브랜드가 제품에만 집중할 수 있도록 돕습니다.
-          </p>
-        </div>
+        <SectionHeader
+          label="PRODUCTION SYSTEM"
+          title="생산부터 출고까지 한 번에!"
+          desc={<>제조 공정 전 과정을 6단계 시스템으로 관리하여<br/>브랜드가 제품에만 집중할 수 있도록 돕습니다.</>}
+          dark
+          className="mb-20"
+        />
 
         <div className="space-y-4">
           <Step

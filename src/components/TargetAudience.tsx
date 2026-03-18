@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, Building2, User2 } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 import { ReactNode } from 'react';
 
 const Card = ({ title, subtitle, items, icon: Icon, isDark, href }: { title: string, subtitle: ReactNode, items: string[], icon: any, isDark?: boolean, href: string }) => (
@@ -20,7 +21,7 @@ const Card = ({ title, subtitle, items, icon: Icon, isDark, href }: { title: str
       </div>
       
       <h3 className={`text-2xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>{title}</h3>
-      <div className={`text-xl font-bold mb-10 leading-snug min-h-[3.5rem] ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+      <div className={`text-base md:text-xl font-bold mb-10 leading-snug min-h-[3.5rem] ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
         {subtitle}
       </div>
       
@@ -49,16 +50,12 @@ export default function TargetAudience() {
   return (
     <section className="py-32 bg-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-20">
-          <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">Target Audience</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">
-            이런 분들과 함께합니다
-          </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-            경험이 없어도 괜찮습니다.<br/>
-            오엔뷰는 실행 가능한 방향을 함께 설계합니다.
-          </p>
-        </div>
+        <SectionHeader
+          label="Target Audience"
+          title="이런 분들과 함께합니다"
+          desc={<>경험이 없어도 괜찮습니다.<br/>오엔뷰는 실행 가능한 방향을 함께 설계합니다.</>}
+          className="mb-20"
+        />
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           <Card

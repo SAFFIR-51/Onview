@@ -11,13 +11,13 @@ export default function MarketingBranding() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight tracking-tight">
               오엔뷰는 브랜드의<br/>
               <span className="text-[#176B36]">성장을 함께 설계합니다.</span>
             </h2>
-            <div className="text-5xl font-black text-[#176B36] my-8 animate-bounce">:</div>
+            <div className="text-3xl md:text-5xl font-black text-[#176B36] my-8 animate-bounce">:</div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              고객의 아이디어를 시장에서 통하는 브랜드로 완성시키는<br/>
+              고객의 아이디어를 시장에서 통하는 <br className="md:hidden" />브랜드로 완성시키는<br/>
               컨설팅형 화장품 제조 파트너입니다.
             </h3>
           </motion.div>
@@ -69,7 +69,7 @@ export default function MarketingBranding() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2 }}
                 >
-                  <h4 className="font-bold text-xl mb-2">- {item.title}</h4>
+                  <h4 className="font-bold text-base md:text-xl mb-2">- {item.title}</h4>
                   <p className="text-gray-500 leading-relaxed whitespace-pre-line pl-4">{item.desc}</p>
                 </motion.div>
               ))}

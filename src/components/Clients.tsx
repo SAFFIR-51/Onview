@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import SectionHeader from './SectionHeader';
 
 const partnerLogos = [
   "네이솜", "노벨리아", "더마솔루션랩", "더버블크루", "덴티스",
@@ -12,21 +13,12 @@ export default function Clients() {
   return (
     <section className="py-32 bg-white text-center overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <SectionHeader
+          label="Partner Brands"
+          title={<>오엔뷰는 다양한<br/>뷰티 브랜드와 함께합니다</>}
+          desc={<>오엔뷰는 다수의 코스메틱 브랜드와 협력 중이며,<br/>실제 시장에서 통하는 제품 기획 노하우를 축적해왔습니다.</>}
           className="mb-8"
-        >
-          <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">Partner Brands</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 tracking-tight">
-            오엔뷰는 다양한<br/>뷰티 브랜드와 함께합니다
-          </h2>
-          <p className="text-gray-500 text-xl max-w-3xl mx-auto mb-4">
-            오엔뷰는 다수의 코스메틱 브랜드와 협력 중이며,<br/>
-            실제 시장에서 통하는 제품 기획 노하우를 축적해왔습니다.
-          </p>
-        </motion.div>
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 10 }}

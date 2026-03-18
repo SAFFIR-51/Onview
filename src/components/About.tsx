@@ -29,8 +29,8 @@ export default function About() {
             className="md:w-3/4 text-xl md:text-3xl font-medium leading-relaxed text-gray-900"
           >
             <p className="mb-8">
-              <span className="text-[#176B36] font-bold">당신의 아이디어를 제품으로 완성합니다.</span><br className="hidden md:block" />
-              브랜드의 시작부터 유통까지, 오엔뷰가 함께합니다.
+              <span className="text-[#176B36] font-bold">당신의 아이디어를 제품으로 완성합니다.</span><br />
+              브랜드의 시작부터 유통까지, <br className="md:hidden" />오엔뷰가 함께합니다.
             </p>
             <p className="text-gray-500 font-normal text-lg md:text-xl">
               오엔뷰는 화장품 제조 분야에서 다양한 고객의 니즈를 반영해<br className="hidden md:block" />
@@ -50,13 +50,13 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-gray-50 p-8 rounded-3xl text-center border border-gray-100 hover:border-[#176B36]/30 hover:shadow-lg transition-all group"
+              className="bg-gray-50 p-4 md:p-8 rounded-3xl text-center border border-gray-100 hover:border-[#176B36]/30 hover:shadow-lg transition-all group"
             >
-              <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-sm group-hover:bg-[#176B36] transition-colors duration-300">
-                <item.icon className="w-8 h-8 text-[#176B36] group-hover:text-white transition-colors duration-300" />
+              <div className="bg-white w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-5 shadow-sm group-hover:bg-[#176B36] transition-colors duration-300">
+                <item.icon className="w-6 h-6 md:w-8 md:h-8 text-[#176B36] group-hover:text-white transition-colors duration-300" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2 text-lg">{item.title}</h4>
-              <p className="text-gray-500 text-sm whitespace-pre-line leading-relaxed">{item.desc}</p>
+              <h4 className="font-bold text-gray-900 mb-1 md:mb-2 text-sm md:text-lg">{item.title}</h4>
+              <p className="text-gray-500 text-xs md:text-sm whitespace-pre-line leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -65,11 +65,14 @@ export default function About() {
 
       {/* 1) 생산 구조 연결 섹션 - 수정3.png 배경 */}
       <div className="relative py-36 xl:py-48 2xl:py-56 overflow-hidden">
-        <img
-          src="/images/about-production.png"
-          alt="생산 구조"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/images/about-production-mobile.png" />
+          <img
+            src="/images/about-production.png"
+            alt="생산 구조"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent md:hidden" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -94,11 +97,14 @@ export default function About() {
 
       {/* 2) 월 생산량 섹션 - 수정5.png 배경, 우측 정렬 */}
       <div className="relative py-36 xl:py-48 2xl:py-56 overflow-hidden">
-        <img
-          src="/images/about-capacity.png"
-          alt="생산 시설"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/images/about-capacity-mobile.png" />
+          <img
+            src="/images/about-capacity.png"
+            alt="생산 시설"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,11 +128,14 @@ export default function About() {
 
       {/* 3) 협업 인프라 섹션 - 수정4.png 배경 */}
       <div className="relative py-36 xl:py-48 2xl:py-56 overflow-hidden">
-        <img
-          src="/images/about-collab.png"
-          alt="협업 인프라"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/images/about-collab-mobile.png" />
+          <img
+            src="/images/about-collab.png"
+            alt="협업 인프라"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent md:hidden" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}

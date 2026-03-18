@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Building2, PackageCheck, Truck } from 'lucide-react';
+import SectionHeader from './SectionHeader';
 import { ReactNode } from 'react';
 
 const ServiceCard = ({ icon: Icon, title, desc, delay }: { icon: any, title: string, desc: ReactNode, delay: number }) => (
@@ -15,7 +16,7 @@ const ServiceCard = ({ icon: Icon, title, desc, delay }: { icon: any, title: str
       <Icon className="w-10 h-10" />
     </div>
     <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#176B36] transition-colors">{title}</h4>
-    <p className="text-gray-500 leading-relaxed text-lg">
+    <p className="text-gray-500 leading-relaxed text-sm md:text-lg">
       {desc}
     </p>
   </motion.div>
@@ -25,22 +26,12 @@ export default function AllInOneCare() {
   return (
     <section className="py-32 bg-[#f8f9fa] text-center overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <SectionHeader
+          label="Total Care Service"
+          title={<>제조부터 출고까지,<br className="md:hidden" /> 한 번에 관리하는<br /><span className="text-[#176B36]">올인원 케어 서비스</span></>}
+          desc={<>기획부터 제조, 출고까지 전 과정을 통합 관리합니다.<br/>불필요한 시간과 비용을 줄일 수 있습니다.</>}
           className="mb-20"
-        >
-          <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">Total Care Service</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight tracking-tight">
-            제조부터 출고까지,<br className="md:hidden" /> 한 번에 관리하는<br />
-            <span className="text-[#176B36]">올인원 케어 서비스</span>
-          </h2>
-          <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed">
-            기획부터 제조, 출고까지 전 과정을 통합 관리합니다.<br/>
-            불필요한 시간과 비용을 줄일 수 있습니다.
-          </p>
-        </motion.div>
+        />
         
         <div className="grid md:grid-cols-3 gap-8">
           <ServiceCard
