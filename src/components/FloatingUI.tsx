@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 export default function FloatingUI() {
   const navigate = useNavigate();
-  const [showPhoneMenu, setShowPhoneMenu] = useState(false);
   const [showKakaoMenu, setShowKakaoMenu] = useState(false);
 
   const scrollToTop = () => {
@@ -14,57 +13,6 @@ export default function FloatingUI() {
 
   return (
     <>
-      {/* Phone Number Selection Overlay */}
-      <AnimatePresence>
-        {showPhoneMenu && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
-            onClick={() => setShowPhoneMenu(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-2xl p-8 mx-4 max-w-sm w-full shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-xl font-bold text-gray-900">유선 상담</h3>
-                <button onClick={() => setShowPhoneMenu(false)} className="text-gray-400 hover:text-gray-600">
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              <p className="text-gray-500 text-sm mb-6">연락하실 번호를 선택해주세요.</p>
-              <div className="space-y-3">
-                <a
-                  href="tel:010-7661-5729"
-                  className="flex items-center gap-3 w-full p-4 rounded-xl border border-gray-200 hover:border-[#176B36] hover:bg-[#176B36]/5 transition-colors"
-                >
-                  <Phone className="w-5 h-5 text-[#176B36]" />
-                  <div>
-                    <span className="font-bold text-gray-900 block">화장품 제조</span>
-                    <span className="text-sm text-gray-500">010-7661-5729</span>
-                  </div>
-                </a>
-                <a
-                  href="tel:010-9699-7744"
-                  className="flex items-center gap-3 w-full p-4 rounded-xl border border-gray-200 hover:border-[#176B36] hover:bg-[#176B36]/5 transition-colors"
-                >
-                  <Phone className="w-5 h-5 text-[#176B36]" />
-                  <div>
-                    <span className="font-bold text-gray-900 block">화장품 창업</span>
-                    <span className="text-sm text-gray-500">010-9699-7744</span>
-                  </div>
-                </a>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Kakao Chat Selection Overlay */}
       <AnimatePresence>
         {showKakaoMenu && (
@@ -125,14 +73,14 @@ export default function FloatingUI() {
           <span className="hidden md:inline">상담 신청</span>
         </motion.button>
 
-        <motion.button
-          onClick={() => setShowPhoneMenu(true)}
+        <motion.a
+          href="tel:010-7661-5729"
           whileHover={{ scale: 1.05, x: -5 }}
           className="bg-white border border-[#176B36] text-[#176B36] p-3 md:px-6 md:py-3 rounded-full shadow-lg font-bold flex items-center justify-center gap-2 hover:bg-[#176B36] hover:text-white transition-colors"
         >
           <Phone className="w-5 h-5" />
           <span className="hidden md:inline">유선 상담</span>
-        </motion.button>
+        </motion.a>
 
         <motion.button
           onClick={() => setShowKakaoMenu(true)}
