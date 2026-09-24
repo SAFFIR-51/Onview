@@ -67,7 +67,7 @@ export default function TargetAudience() {
               "제조부터 브랜딩·마케팅까지 통합 지원이 필요한 분"
             ]}
             icon={Building2}
-            href="https://open.kakao.com/o/sQNHfeli"
+            href="https://open.kakao.com/o/scLWXdli"
           />
           <Card
             title="차별화된 제품을 원하는 대표님"

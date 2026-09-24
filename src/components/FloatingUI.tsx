@@ -1,11 +1,9 @@
-import { motion, AnimatePresence } from 'motion/react';
-import { Phone, ArrowUp, MessageSquare, MessageCircle, X } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Phone, ArrowUp, MessageSquare, MessageCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 export default function FloatingUI() {
   const navigate = useNavigate();
-  const [showKakaoMenu, setShowKakaoMenu] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -13,55 +11,6 @@ export default function FloatingUI() {
 
   return (
     <>
-      {/* Kakao Chat Selection Overlay */}
-      <AnimatePresence>
-        {showKakaoMenu && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
-            onClick={() => setShowKakaoMenu(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-2xl p-8 mx-4 max-w-sm w-full shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-xl font-bold text-gray-900">카카오 상담</h3>
-                <button onClick={() => setShowKakaoMenu(false)} className="text-gray-400 hover:text-gray-600">
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              <p className="text-gray-500 text-sm mb-6">상담 채널을 선택해주세요.</p>
-              <div className="space-y-3">
-                <a
-                  href="https://open.kakao.com/o/scLWXdli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 w-full p-4 rounded-xl border border-gray-200 hover:border-[#FEE500] hover:bg-[#FEE500]/10 transition-colors"
-                >
-                  <MessageCircle className="w-5 h-5 text-[#3C1E1E]" />
-                  <span className="font-bold text-gray-900">화장품 제조 상담</span>
-                </a>
-                <a
-                  href="https://open.kakao.com/o/sQNHfeli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 w-full p-4 rounded-xl border border-gray-200 hover:border-[#FEE500] hover:bg-[#FEE500]/10 transition-colors"
-                >
-                  <MessageCircle className="w-5 h-5 text-[#3C1E1E]" />
-                  <span className="font-bold text-gray-900">화장품 창업 상담</span>
-                </a>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Floating Side Buttons */}
       <div className="fixed right-5 bottom-10 z-40 flex flex-col gap-3">
         <motion.button
@@ -82,14 +31,16 @@ export default function FloatingUI() {
           <span className="hidden md:inline">유선 상담</span>
         </motion.a>
 
-        <motion.button
-          onClick={() => setShowKakaoMenu(true)}
+        <motion.a
+          href="https://open.kakao.com/o/scLWXdli"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05, x: -5 }}
           className="bg-[#FEE500] border border-[#FEE500] text-[#3C1E1E] p-3 md:px-6 md:py-3 rounded-full shadow-lg font-bold flex items-center justify-center gap-2 hover:bg-[#FDD835] transition-colors"
         >
           <MessageCircle className="w-5 h-5" />
           <span className="hidden md:inline">카카오 상담</span>
-        </motion.button>
+        </motion.a>
 
         <motion.button
           onClick={scrollToTop}
